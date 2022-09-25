@@ -3,8 +3,22 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+*,
+*::before,
+*::after {
+  --blue-100: hsl(200 90% 90%);
+  --blue-200: hsl(200 80% 80%);
+  --blue-300: hsl(200 70% 70%);
+  --blue-400: hsl(200 60% 60%);
+  --blue-500: hsl(200 50% 50%);
+  --blue-600: hsl(200 60% 40%);
+  --blue-700: hsl(200 70% 30%);
+  --blue-800: hsl(200 80% 20%);
+  --blue-900: hsl(200 90% 10%);
+}
+
 body {
-  font-family: Verdana, sans-serif;
+  font-family: sans-serif;
   margin: auto;
   padding: 20px;
   max-width: 65ch;
@@ -26,7 +40,7 @@ b {
   color: #222;
 }
 a {
-  color: hsl(210, 70%, 50%);
+  color: var(--blue-400);
 }
 nav a {
   margin-right: 10px;
@@ -42,22 +56,37 @@ content {
   line-height: 1.6;
 }
 table {
-  width: 100%;
+  display: block;
+  border-collapse: collapse;
+  border-top: 1px solid #eee;
+  overflow: scroll;
+  white-space: nowrap;
 }
 table th {
-  border: 0 0 1px 0 solid #333;
+  border-bottom: 1px solid #eee;
+  padding: 0.5em;
+}
+table td {
+  padding: 0.5em;
+}
+table tr:nth-child(2n) {
+  background-color: rgb(246, 246, 246);
 }
 img {
   max-width: 100%;
   height: auto;
 }
 code {
+  font-family: monospace;
   padding: 2px 5px;
   background-color: hsl(0, 0%, 90%);
-  color: hsl(210, 70%, 50%);
+  border-radius: 0.5em;
+  color: var(--blue-400);
 }
 pre {
+  font-family: monospace;
   padding: 1rem;
+  border-radius: 1em;
 }
 pre > code {
   all: unset;
@@ -69,4 +98,19 @@ blockquote {
   padding: 2px 0px 2px 20px;
   margin: 0px;
   font-style: italic;
+}
+ul {
+  padding-left: 2em;
+}
+ul li {
+  margin: 0.5em 0;
+}
+ul li a {
+  color: var(--blue-400);
+}
+ul li a:visited {
+  color: var(--blue-700);
+}
+img {
+  border-radius: 1em;
 }
