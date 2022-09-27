@@ -112,5 +112,11 @@ ul li a:visited {
   color: var(--blue-700);
 }
 img {
+  object-fit: cover;
+  width: 100%;
   border-radius: 1em;
+  border-color: #eee;
+  border-width: 0.2em;
+  border-style: solid;
+  margin: -0.2em;
 }
