@@ -39,15 +39,15 @@ switch 문으로 잘 바꿨다면 어느 정도 패턴이 존재할 것이다.
 
 ### Example 1
 
-![example_1](../../../public/blog/if-else-refactoring/example_1.png)
+![example_1](/blog/if-else-refactoring/example_1.png)
 
 ### Example 2
 
-![example_2](../../../public/blog/if-else-refactoring/example_2.png)
+![example_2](/blog/if-else-refactoring/example_2.png)
 
 ### Example 3
 
-![example_3](../../../public/blog/if-else-refactoring/example_3.png)
+![example_3](/blog/if-else-refactoring/example_3.png)
 
 ## 느낀점
 
