@@ -19,7 +19,7 @@
   --primary-800: hsl(var(--hue), 80%, 20%);
   --primary-900: hsl(var(--hue), 90%, 10%);
 
-  --bg-color: hsl(var(--hue), 20%, 98%);
+  --bg-color: hsl(var(--hue), 20%, 99%);
 }
 
 body {
@@ -48,7 +48,6 @@ b {
 a {
   color: var(--primary-600);
 }
-
 nav a {
   margin-right: 10px;
 }
@@ -63,14 +62,14 @@ content {
   line-height: 1.6;
 }
 table {
-  display: block;
+  width: 100%;
   border-collapse: collapse;
-  border-top: 1px solid var(--primary-100);
+  border-top: 1px solid var(--primary-900);
   overflow: scroll;
   white-space: nowrap;
 }
 table th {
-  border-bottom: 1px solid var(--primary-100);
+  border-bottom: 1px solid var(--primary-900);
   padding: 0.5em;
 }
 table td {
@@ -82,6 +81,14 @@ table tr:nth-child(2n) {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin-inline: auto;
+  margin-block: 2em;
+  object-fit: cover;
+  border-radius: 1em;
+  border-color: #ccc;
+  border-width: 0.2rem;
+  border-style: solid;
 }
 code {
   font-family: monospace;
@@ -117,17 +124,6 @@ ul li a {
 }
 ul li a:visited {
   color: var(--primary-800);
-}
-img {
-  display: block;
-  margin-inline: auto;
-  margin-block: 1em;
-  object-fit: cover;
-  max-width: 100%;
-  border-radius: 1em;
-  border-color: #ccc;
-  border-width: 0.2em;
-  border-style: solid;
 }
 .text-gray {
   color: #999;

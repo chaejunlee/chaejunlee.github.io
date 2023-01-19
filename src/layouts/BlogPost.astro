@@ -3,21 +3,25 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { getDates } from "../utils/dates";
+import TagList from "../components/TagList.astro";
+import type { Tags } from "../components/TagList.astro";
 
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    updatedDate?: string;
-    heroImage?: string;
-    tags: string[];
-  };
+export interface BlogProps {
+  title: string;
+  description: string;
+  pubDate?: string;
+  updatedDate?: string;
+  heroImage?: string;
+  tags?: Tags;
+}
+
+interface Props {
+  content: BlogProps;
 }
 
 const {
   content: { title, description, pubDate, updatedDate, heroImage, tags },
-} = Astro.props;
+} = Astro.props as Props;
 ---
 
 <html lang="en">
@@ -31,24 +35,7 @@ const {
         font-size: 2em;
         margin: 0;
       }
-      .tag-list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-block: 1rem;
-        padding: 0;
-        list-style: none;
-        gap: 0.25rem;
-      }
-      .tag {
-        margin: 0;
-        background-color: #eee;
-        padding-inline: 1rem;
-        padding-block: 0.25rem;
-        border-radius: 100vh;
-      }
-      .tag a {
-        text-decoration: none;
-      }
+
       hr {
         border-top: 1px solid #ddd;
         margin: 1rem 0;
@@ -81,21 +68,17 @@ const {
               )
             }
           </div>
-          {
-            tags && (
-              <ul class="tag-list">
-                {tags.map((tag: string) => (
-                  <li class="tag">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                  </li>
-                ))}
-              </ul>
-            )
-          }
+          {tags && <TagList tags={tags} />}
         </header>
         {
-          heroImage && (
-            <img class="hero" width={720} height={360} src={heroImage} alt="" />
+          (
+            <img
+              class="hero"
+              width={720}
+              height={360}
+              src={heroImage ?? "/placeholder-hero.jpg"}
+              alt=""
+            />
           )
         }
         <slot />

@@ -1,0 +1,47 @@
+---
+export type Tags = string[];
+interface TagList {
+  tags: Tags;
+}
+
+const { tags } = Astro.props as TagList;
+---
+
+<style>
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 1rem;
+    padding: 0;
+    list-style: none;
+    gap: 0.25rem;
+    text-decoration: none;
+  }
+  .tag {
+    margin: 0;
+    background-color: #e9e9e9;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-radius: 100vh;
+    text-decoration: none;
+    color: var(--primary-500);
+  }
+  .tag:hover {
+    background-color: #efefef;
+    color: var(--primary-400);
+  }
+  .tag > li {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<ul class="tag-list">
+  {
+    tags.map((tag) => (
+      <a class="tag" href={`/tags/${tag}`}>
+        <li>{tag}</li>
+      </a>
+    ))
+  }
+</ul>
