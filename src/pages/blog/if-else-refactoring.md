@@ -4,6 +4,7 @@ title: "if else를 가독성 높게 리팩토링 하는 법"
 description: "switch 문을 이용한 뒤 객체를 이용하는 방법으로 최적화 시키기"
 pubDate: "2022.11.27"
 heroImage: "/blog/if-else-refactoring/thumbnail.png"
+tags: ["공부", "유튜브 정리"]
 ---
 
 [원본 영상 링크](https://www.youtube.com/watch?v=p0YEviesgRM&t=1039s&ab_channel=FE%EC%9E%AC%EB%82%A8)

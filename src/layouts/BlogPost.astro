@@ -11,11 +11,12 @@ export interface Props {
     pubDate?: string;
     updatedDate?: string;
     heroImage?: string;
+    tags: string[];
   };
 }
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage },
+  content: { title, description, pubDate, updatedDate, heroImage, tags },
 } = Astro.props;
 ---
 
@@ -29,6 +30,24 @@ const {
       .title {
         font-size: 2em;
         margin: 0;
+      }
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-block: 1rem;
+        padding: 0;
+        list-style: none;
+        gap: 0.25rem;
+      }
+      .tag {
+        margin: 0;
+        background-color: #eee;
+        padding-inline: 1rem;
+        padding-block: 0.25rem;
+        border-radius: 100vh;
+      }
+      .tag a {
+        text-decoration: none;
       }
       hr {
         border-top: 1px solid #ddd;
@@ -62,6 +81,17 @@ const {
               )
             }
           </div>
+          {
+            tags && (
+              <ul class="tag-list">
+                {tags.map((tag: string) => (
+                  <li class="tag">
+                    <a href={`/tags/${tag}`}>{tag}</a>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
         </header>
         {
           heroImage && (
