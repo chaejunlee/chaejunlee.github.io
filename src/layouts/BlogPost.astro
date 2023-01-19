@@ -49,14 +49,22 @@ const {
       <article style="position:relative;">
         {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
         <h1 class="title">{title}</h1>
-        {pubDate && <time>{getDates(pubDate)}</time>}
-        {
-          updatedDate && (
-            <div>
-              Last updated on <time>{updatedDate}</time>
-            </div>
-          )
-        }
+        <div class="text-gray">
+          {
+            pubDate && (
+              <div>
+                게시일 <time>{getDates(pubDate)}</time>
+              </div>
+            )
+          }
+          {
+            updatedDate && (
+              <div>
+                수정일 <time>{updatedDate}</time>
+              </div>
+            )
+          }
+        </div>
         <hr />
         <slot />
       </article>

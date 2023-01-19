@@ -128,3 +128,6 @@ img {
   border-width: 0.2em;
   border-style: solid;
 }
+.text-gray {
+  color: #999;
+}
