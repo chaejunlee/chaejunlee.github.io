@@ -22,16 +22,29 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
         list-style-type: none;
         padding-left: 0;
       }
-      ul li {
+      .card {
         display: flex;
+        border-bottom: 3px solid #ccc;
+        padding: 0.25em;
+        margin: 0;
       }
-      ul li time {
-        flex: 0 0 140px;
-        font-style: italic;
-        color: #888;
+      ul li a {
+        width: 100%;
+        text-decoration: none;
+        padding-block: 2em;
+        padding-inline: 1em;
+        border-radius: 0.5em;
       }
-      ul li a:visited {
-        color: hsl(200, 50%, 50%);
+      ul li a:hover {
+        background-color: #eee;
+      }
+      ul li a h3 {
+        margin: 0;
+        color: var(--primary-600);
+        font-size: 1.7em;
+      }
+      ul li a:visited h3 {
+        color: var(--primary-800);
       }
     </style>
   </head>
@@ -42,11 +55,13 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
         <ul style="padding-left:0;">
           {
             posts.map((post) => (
-              <li>
-                <time datetime={post.frontmatter.pubDate}>
-                  {getDates(post.frontmatter.pubDate)}
-                </time>
-                <a href={post.url}>{post.frontmatter.title}</a>
+              <li class="card">
+                <a href={post.url}>
+                  <h3>{post.frontmatter.title}</h3>
+                  <time class="text-gray" datetime={post.frontmatter.pubDate}>
+                    {getDates(post.frontmatter.pubDate)}
+                  </time>
+                </a>
               </li>
             ))
           }

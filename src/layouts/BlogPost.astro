@@ -23,22 +23,19 @@ const {
   <head>
     <BaseHead title={title} description={description} />
     <style>
+      .title-header {
+        margin-block: 3em;
+      }
       .title {
         font-size: 2em;
-        margin: 0.25em 0 0;
+        margin: 0;
       }
       hr {
         border-top: 1px solid #ddd;
         margin: 1rem 0;
       }
-      img {
-        object-fit: cover;
-        width: 100%;
-        border-radius: 1em;
-        border-color: #eee;
-        border-width: 0.2em;
-        border-style: solid;
-        margin: -0.2em;
+      .hero {
+        margin-block: 3em;
       }
     </style>
   </head>
@@ -47,25 +44,30 @@ const {
     <Header />
     <main>
       <article style="position:relative;">
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <h1 class="title">{title}</h1>
-        <div class="text-gray">
-          {
-            pubDate && (
-              <div>
-                게시일 <time>{getDates(pubDate)}</time>
-              </div>
-            )
-          }
-          {
-            updatedDate && (
-              <div>
-                수정일 <time>{updatedDate}</time>
-              </div>
-            )
-          }
-        </div>
-        <hr />
+        <header class="title-header">
+          <h1 class="title">{title}</h1>
+          <div class="text-gray">
+            {
+              pubDate && (
+                <div>
+                  게시일 <time>{getDates(pubDate)}</time>
+                </div>
+              )
+            }
+            {
+              updatedDate && (
+                <div>
+                  수정일 <time>{updatedDate}</time>
+                </div>
+              )
+            }
+          </div>
+        </header>
+        {
+          heroImage && (
+            <img class="hero" width={720} height={360} src={heroImage} alt="" />
+          )
+        }
         <slot />
       </article>
     </main>
