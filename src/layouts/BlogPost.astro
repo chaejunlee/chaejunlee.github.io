@@ -29,19 +29,18 @@ const {
     <BaseHead title={title} description={description} />
     <style>
       .title-header {
-        margin-block: 3em;
+        margin-bottom: 2em;
       }
       .title {
         font-size: 2em;
         margin: 0;
       }
-
       hr {
         border-top: 1px solid #ddd;
         margin: 1rem 0;
       }
       .hero {
-        margin-block: 3em;
+        margin-block: 2em;
       }
     </style>
   </head>
@@ -53,20 +52,22 @@ const {
         <header class="title-header">
           <h1 class="title">{title}</h1>
           <div class="text-gray">
-            {
-              pubDate && (
-                <div>
-                  게시일 <time>{getDates(pubDate)}</time>
-                </div>
-              )
-            }
-            {
-              updatedDate && (
-                <div>
-                  수정일 <time>{updatedDate}</time>
-                </div>
-              )
-            }
+            <div>
+              {
+                pubDate && (
+                  <>
+                    게시일{" "}<time class="font-lighter">{getDates(pubDate)}</time>
+                  </>
+                )
+              }
+              {
+                updatedDate && (
+                  <>
+                    수정일{" "}<time class="font-lighter">{updatedDate}</time>
+                  </>
+                )
+              }
+            </div>
           </div>
           {tags && <TagList tags={tags} />}
         </header>
@@ -74,8 +75,8 @@ const {
           (
             <img
               class="hero"
-              width={720}
-              height={360}
+              width={480}
+              height={240}
               src={heroImage ?? "/placeholder-hero.jpg"}
               alt=""
             />

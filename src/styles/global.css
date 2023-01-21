@@ -49,7 +49,7 @@ a {
   color: var(--primary-600);
 }
 nav a {
-  margin-right: 10px;
+  /* margin-rigHt: 10px; */
 }
 textarea {
   width: 100%;
@@ -79,11 +79,11 @@ table tr:nth-child(2n) {
   background-color: var(--primary-50);
 }
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
   margin-inline: auto;
-  margin-block: 2em;
+  margin-block: 1em;
   object-fit: cover;
   border-radius: 1em;
   border-color: #ccc;
@@ -127,4 +127,7 @@ ul li a:visited {
 }
 .text-gray {
   color: #999;
+}
+.font-lighter {
+  font-weight: lighter;
 }
