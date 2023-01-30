@@ -21,11 +21,13 @@ const posts = (await getCollection("blog")).sort((a, b) => {
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
       .card {
-        border-radius: 0.5rem;
         padding-block: 2em;
-        border-bottom: 2px solid #eee;
+        border-bottom: 2px solid var(--gray-200);
         display: flex;
         gap: 2rem;
+      }
+      .card:last-child {
+        border-bottom: none;
       }
       .card-content {
         flex-basis: 0;
@@ -39,7 +41,7 @@ const posts = (await getCollection("blog")).sort((a, b) => {
         aspect-ratio: 1/1;
         border-width: 0.25rem;
         border-style: solid;
-        border-color: #ccc;
+        border-color: var(--gray-200);
         border-radius: 1rem;
         overflow: hidden;
       }
@@ -67,7 +69,7 @@ const posts = (await getCollection("blog")).sort((a, b) => {
         margin: 0;
       }
       a:hover h3 {
-        color: var(--primary-800);
+        color: var(--sky-800);
       }
       .card-description {
         overflow: hidden;
@@ -98,7 +100,10 @@ const posts = (await getCollection("blog")).sort((a, b) => {
             <div class="card">
               <a class="card-link" href={`/blog/${post.slug}/`}>
                 <div class="card-image">
-                  <img src={post.data.heroImage ?? "/placeholder-hero.jpg"} />
+                  <img
+                    src={post.data.heroImage ?? "/placeholder-hero.jpg"}
+                    alt={`hero image of ${post.slug}`}
+                  />
                 </div>
               </a>
               <div class="card-content">
