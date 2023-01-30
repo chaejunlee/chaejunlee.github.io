@@ -1,27 +1,19 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { getDates } from "../utils/dates";
 import TagList from "../components/TagList.astro";
-import type { Tags } from "../components/TagList.astro";
 
-export interface BlogProps {
-  title: string;
-  description: string;
-  pubDate?: string;
-  updatedDate?: string;
-  heroImage?: string;
-  tags?: Tags;
-}
+type Props = CollectionEntry<"blog">["data"];
 
-interface Props {
-  content: BlogProps;
-}
+const { title, description, pubDate, updatedDate, heroImage, tags } =
+  Astro.props.frontmatter || Astro.props;
 
-const {
-  content: { title, description, pubDate, updatedDate, heroImage, tags },
-} = Astro.props as Props;
+const frontmatter = Astro.props?.frontmatter || Astro.props;
+
+console.log(frontmatter);
 ---
 
 <html lang="en">
@@ -34,6 +26,9 @@ const {
       .title {
         font-size: 2em;
         margin: 0;
+      }
+      .title-description {
+        margin-block: 0rem;
       }
       hr {
         border-top: 1px solid #ddd;
@@ -51,25 +46,27 @@ const {
       <article style="position:relative;">
         <header class="title-header">
           <h1 class="title">{title}</h1>
+          <p class="title-description">{description}</p>
+          {tags && <TagList tags={tags} />}
           <div class="text-gray">
             <div>
               {
                 pubDate && (
                   <>
-                    게시일{" "}<time class="font-lighter">{getDates(pubDate)}</time>
+                    게시일 <time class="font-lighter">{getDates(pubDate)}</time>
                   </>
                 )
               }
               {
                 updatedDate && (
                   <>
-                    수정일{" "}<time class="font-lighter">{updatedDate}</time>
+                    수정일{" "}
+                    <time class="font-lighter">{getDates(updatedDate)}</time>
                   </>
                 )
               }
             </div>
           </div>
-          {tags && <TagList tags={tags} />}
         </header>
         {
           (

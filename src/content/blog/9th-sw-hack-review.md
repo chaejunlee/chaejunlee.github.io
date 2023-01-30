@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "제9회 대한민국 SW융합 해커톤 참여 후기"
 description: "제9회 대한민국 SW융합 해커톤을 참여하며 느낀 점들"
 pubDate: "2022.09.25"

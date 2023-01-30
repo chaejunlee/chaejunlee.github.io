@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "2022년 겨울 멘토링 힐링 리뷰"
 description: "선배님에게 어떻게 신입 개발자가 될 수 있는지 물어보기"
 pubDate: "2023.01.19"

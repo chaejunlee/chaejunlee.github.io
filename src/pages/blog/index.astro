@@ -1,27 +1,18 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { getDates } from "../utils/dates";
-import type { BlogProps } from "../layouts/BlogPost.astro";
-import TagList from "../components/TagList.astro";
-
-interface Frontmatter {
-  frontmatter: BlogProps;
-  url: string | undefined;
-}
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getDates } from "../../utils/dates";
+import TagList from "../../components/TagList.astro";
+import { getCollection } from "astro:content";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob<Frontmatter>("./blog/*.{md,mdx}")).sort(
-  (a, b) => {
-    const postB = (b.frontmatter?.updatedDate ||
-      b.frontmatter.pubDate) as string;
-    const postA = (a.frontmatter?.updatedDate ||
-      a.frontmatter.pubDate) as string;
-    return new Date(postB).valueOf() - new Date(postA).valueOf();
-  }
-);
+const posts = (await getCollection("blog")).sort((a, b) => {
+  const postB = b.data.updatedDate || b.data.pubDate;
+  const postA = a.data.updatedDate || a.data.pubDate;
+  return new Date(postB).valueOf() - new Date(postA).valueOf();
+});
 ---
 
 <!DOCTYPE html>
@@ -37,7 +28,10 @@ const posts = (await Astro.glob<Frontmatter>("./blog/*.{md,mdx}")).sort(
         gap: 2rem;
       }
       .card-content {
-        flex-shrink: 0;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 100px;
       }
       .card-image {
         object-fit: cover;
@@ -75,6 +69,11 @@ const posts = (await Astro.glob<Frontmatter>("./blog/*.{md,mdx}")).sort(
       a:hover h3 {
         color: var(--primary-800);
       }
+      .card-description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
       @media (max-width: 768px) {
         .card {
           flex-direction: column;
@@ -83,6 +82,9 @@ const posts = (await Astro.glob<Frontmatter>("./blog/*.{md,mdx}")).sort(
         .card-image {
           width: auto;
           aspect-ratio: 2/1;
+        }
+        .card-content {
+          width: auto;
         }
       }
     </style>
@@ -94,25 +96,21 @@ const posts = (await Astro.glob<Frontmatter>("./blog/*.{md,mdx}")).sort(
         {
           posts.map((post) => (
             <div class="card">
-              <a class="card-link" href={post.url}>
+              <a class="card-link" href={`/blog/${post.slug}/`}>
                 <div class="card-image">
-                  <img
-                    src={post.frontmatter.heroImage ?? "/placeholder-hero.jpg"}
-                  />
+                  <img src={post.data.heroImage ?? "/placeholder-hero.jpg"} />
                 </div>
               </a>
               <div class="card-content">
                 <h3 class="card-title">
-                  <a class="card-link" href={post.url}>
-                    {post.frontmatter.title}
+                  <a class="card-link" href={`/blog/${post.slug}/`}>
+                    {post.data.title}
                   </a>
                 </h3>
-                <p>{post.frontmatter.description}</p>
-                {post.frontmatter.tags && (
-                  <TagList tags={post.frontmatter.tags} />
-                )}
-                <time class="text-gray" datetime={post.frontmatter.pubDate}>
-                  {getDates(post.frontmatter.pubDate || "")}
+                <p class="card-description">{post.data.description}</p>
+                {post.data.tags && <TagList tags={post.data.tags} />}
+                <time class="text-gray" datetime={getDates(post.data.pubDate)}>
+                  {getDates(post.data.pubDate || "")}
                 </time>
               </div>
             </div>

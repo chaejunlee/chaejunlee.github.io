@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "if else를 가독성 높게 리팩토링 하는 법"
 description: "switch 문을 이용한 뒤 객체를 이용하는 방법으로 최적화 시키기"
 pubDate: "2022.11.27"
