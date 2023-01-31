@@ -1,17 +1,124 @@
 ---
 layout: "../layouts/BlogPost.astro"
 title: "About Me"
-description: "Lorem ipsum dolor sit amet"
-updatedDate: "August 08 2022"
-heroImage: "/placeholder-about.jpg"
+description: "하고 싶은 게 많은 프론트 개발자"
+updatedDate: "2023.01.31"
+heroImage: "/placeholder-about.jpeg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+## 🎧 About Me
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+-
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+## 🔥 Projects
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+### [2022 대구를 빛내는 SW 해커톤] 신청 폼 프론트 개발
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+- 개발 기간: `2021.08 ~ 2021.09`
+- [2022 대구를 빛내는 SW 해커톤]은 컴퓨터학부에서 기획한 해커톤입니다
+- 해당 기획으로 SW교육원에 도움과 후원을 요청했습니다
+- SW교육원은 **50팀, 180명 이상 지원 받을 것을 요구**했습니다
+- 신청을 독려하기 위해 매력적인 신청 폼을 기획하였습니다
+- **실시간 지원 현황** 확인과 인터랙티브한 폼을 제작했습니다
+
+#### 역할
+
+- 잘못 적은, 미입력한 데이터가 없도록 폼의 유효성을 검증했습니다.
+  - 오류 없이 데이터를 처리하는 것은 신청자와 운영진 모두 필요한 기능이었습니다.
+  - `zod`, `react-hook-form`을 이용해 유효성 검사를 구현했습니다
+  - 실제로 접수된 **221명** 데이터 중 누락되거나 잘못 적힌 데이터가 없었고 신청자의 항의 메일도 없었습니다
+- 백엔드와 REST API를 이용해 데이터를 주고받았습니다
+  - 백엔드와의 협업을 위해 API 명세를 작성했습니다
+  - `axios`를 이용해 데이터를 주고받았습니다
+  - `react-query`를 이용해 주고 받은 데이터를 관리했습니다.
+- **Google Analytics**를 이용해 접속자에 대한 정보를 수집했습니다
+  - 신청 접수 기간 동안 총 **533명**이 접속했고 총 **2523회** 조회됐음을 확인했습니다
+
+#### 링크
+
+- <a href="https://github.com/chaejunlee/cse-hackathon" target="_blank">
+    깃헙 리포 링크
+  </a>
+
+### 학회 홈페이지 외주 제작
+
+- 학부 교수님들께 학회 홍보 홈페이지를 의뢰 받아 제작하였습니다
+- **빠른 화면 로딩**을 주문 받아 정적인 사이트를 제작하고자 노력했습니다
+
+#### 빠른 화면 로딩
+
+- **UCWIT**의 경우 HTML, CSS만을 이용했습니다
+  - 개발 기간: `2022.10 ~ 2022.11`
+  - 요청하신 페이지 수가 적어서 HTML만으로도 컨텐츠 추가/수정이 어렵지 않았습니다
+- **AVSS**의 경우 Astro 프레임워크를 이용했습니다
+  - 개발 기간: `2022.12 ~`
+  - 요청하신 페이지 수가 많아서 HTML만으로는 추가/수정이 어려웠습니다
+  - 글 작성/수정이 쉽도록 Astro의 Markdown을 이용한 페이지 동적 생성 기능을 사용했습니다
+  - 클라이언트에 전달되는 JS를 최소화하기 위해 Astro의 Island Architecture를 사용했습니다
+  - Vercel을 이용해 배포하였습니다
+
+#### 링크
+
+- <a href="https://computer.knu.ac.kr/ucwit2022" target="_blank">
+    UCWIT
+  </a>
+- <a href="https://github.com/chaejunlee/avss-2023" target="_blank">
+    AVSS2023
+  </a>
+
+### 다국어 지원 버스 예약 시스템 (영어/스페인어)
+
+- 개발 기간: `2022.10 ~ 2022.12`
+- 외국인 버디 활동을 하면서 라틴어를 사용하는 외국을 위한 버스 예약 시스템이 필요함을 느꼈습니다
+- 실제로 배포하지는 못하더라도 실제 서비스를 따라 만들면서 디비 설계 능력을 키웠습니다
+
+#### 역할
+
+- 아이디어를 기획과 기능을 제안했습니다
+- ER Diagram 설계, ER Schema 설계, SQL 작성했습니다
+- DB를 이용한 웹 서비스 제작에서 프론트 디자인을 맡았습니다
+- DB와의 연동을 JDBC로 구현했고 JSP만 사용할 수 있었습니다
+
+#### 어려움
+
+- JSP는 페이지 생성 기술이기 때문에 클라이언트에서 접근할 수 있는 REST API를 구현할 수 없었습니다
+- 클라이언트는 서버로부터 페이지 단위로 데이터를 받기 때문에 React 등 JS를 사용해 SPA를 구현하는 것은 불가능했습니다
+- 데이터를 처리하는 핵심 기능들은 서버에 의존하는 방식으로 설계했습니다
+- 프론트는 JS를 제외시키고 Semantic한 태그들과 CSS만으로 해결하였습니다
+
+#### 기술
+
+- Oracle DB 11g & JDBC
+- JSP & CSS
+
+#### 링크
+
+- <a href="https://github.com/chaejunlee/COMP0322" target="_blank">
+    깃헙 리포 링크
+  </a>
+- <a href="https://youtu.be/e_PgEpe5W-E" target="_blank">유튜브 데모 영상</a>
+
+## 🇺🇸 English Afficiency
+
+### TOEFL
+
+- `98` (2022.08)
+  - L: 25, R: 28, S: 21, W: 24
+
+### TOEIC
+
+- `940` (2023.01)
+  - RC: 490, LC: 450
+- ~`975` (2019.05)~
+  - ~RC: 495, LC: 480~
+
+## 📍 Educations
+
+- `(Expected) 2023.07 ~ 2024.05`
+  - 산호세주립대학교 교환학생
+- `2022.07`
+  - The Uni. of Texas at Austin, Academic English Program
+- `2019.07`
+  - 산호세주립대학교 서머 스쿨
+- `2019.03 ~`
+  - 경북대학교 컴퓨터학부 학사
