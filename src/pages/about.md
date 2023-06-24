@@ -125,6 +125,18 @@ heroImage: "/placeholder-about.jpeg"
   </a>
 - <a href="https://youtu.be/e_PgEpe5W-E" target="_blank">유튜브 데모 영상</a>
 
+## 🎓 Studies
+
+### GPA
+
+- `4.21` / `4.3` (2023. 02)
+
+### TOPCIT
+
+- `LEVEL 3` (2023. 05. 20.)
+  - 48/65 문제
+  - 590점 (상위 10% 474.4점)
+
 ## 🇺🇸 English Afficiency
 
 ### TOEFL
