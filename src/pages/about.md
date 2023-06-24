@@ -12,6 +12,32 @@ heroImage: "/placeholder-about.jpeg"
 
 ## 🔥 Projects
 
+### NTTTT - NFT Ticket Trading Town 프론트 개발
+
+- 개발 기간: `2023.03 ~ 2023.05`
+- 아티스트 콘서트 사진을 기반으로 한 NFT 티켓 거래 플랫폼을 개발했습니다
+- 종합프로젝트2 과목의 일환으로 진행했습니다
+- 약 2달 간 기획을 진행하며 구현 방향 및 개발 계획을 수립했습니다
+- 실제 개발 기간은 5월, 한 달이었습니다
+
+#### 역할
+
+- 모바일에 최적화된 UI/UX를 설계했습니다
+  - `tailwind`를 사용해 반응형 웹을 구현했습니다
+  - `rtk-query`를 사용해 서버 데이터를 관리했습니다
+  - `framer-motion`을 사용해 애니메이션을 구현했습니다
+  - 특히 `framer-motion`을 사용해 실제 앱과 유사한 느낌이 들도록 애니메이션을 구현했습니다
+  - `vite-pwa-plugin`의 `workbox`가 api route의 request를 intercept하는 문제를 해결했습니다
+- 같은 학교의 대학생 디자이너와 협업하였습니다
+  - Figma를 사용해 작업물을 공유했습니다
+  - UI/UX를 중심으로 피드백을 주고받았습니다
+
+#### 링크
+
+- <a href="https://github.com/ntttt-nft-ticket-trading-town/ntttt-fe" target="_blank">
+    깃헙 리포 링크
+  </a>
+
 ### [2022 대구를 빛내는 SW 해커톤] 신청 폼 프론트 개발
 
 - 개발 기간: `2021.08 ~ 2021.09`
