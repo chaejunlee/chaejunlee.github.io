@@ -2,55 +2,100 @@
 layout: "../layouts/BlogPost.astro"
 title: "About Me"
 description: "하고 싶은 게 많은 프론트 개발자"
-updatedDate: "2023.06.25"
+updatedDate: "2023.07.10"
 heroImage: "/placeholder-about.jpeg"
 ---
 
 ## 🎧 About Me
 
-- 좋은 UI/UX가 앱의 가장 중요한 가치라고 생각합니다
-- 모든 기기에서 작동하는 앱을 만들고 싶습니다
-- 잘 동작하고 코드를 작성하기 위해 또 공부합니다
-- 잘 읽히는 코드를 작성하기 위해 또 수정합니다
-- 문제를 마주하면 해결할 때까지 끈질기게 고민합니다
-  - 문제가 해결되기 전까지 고민하고 조언을 구하며 끝내 해결합니다
-  - 문제를 해결한 순간의 짜릿함을 삶의 원동력으로 삼습니다
-- 말보다는 글로 소통하는 것을 선호합니다
-  - 아직은 말로 누군가에게 부탁하거나 부탁받는 것이 부끄럽습니다 ㅎㅎ
-  - 더불어 글로 소통할 때 더 정확하게 의사를 전달할 수 있다고 생각합니다
-- 하나의 서비스를 개발할 수 있는 능력을 갖추고 있습니다
-  - React, Next.js를 이용해 풀스택으로 개발할 수 있습니다
-  - 서비스 개발에서 풀스택은 필수적이라고 생각합니다
-- EDM, 힙합 등 베이스 강한 음악을 좋아합니다
-  - 정기적으로 페스티벌 가는 것을 즐깁니다
+- 웹 프론트엔드 개발자를 지망하는 신입 개발자입니다.
+- UI/UX의 가치를 중요하게 생각하며, 모든 기기에서 작동하는 앱을 만들고자 합니다.
+- 코드 작성과 문제 해결을 위해 지속적인 공부와 수정에 헌신합니다.
+- 끈질기게 문제를 해결하고, 조언을 구하며 최종적으로 해결합니다.
+- 문제를 해결한 순간의 성취감이 삶의 원동력이 되고, 글로 소통하여 정확하게 의사를 전달하는 것을 선호합니다.
+- React와 Next.js를 활용하여 풀스택으로 개발할 수 있는 능력을 갖추고 있습니다.
+- EDM과 힙합 등 베이스 강한 음악을 좋아하며, 정기적으로 페스티벌에 참여하는 것을 즐깁니다.
 
 ## 🔥 Projects
+
+### ChatAI-B 프론트 개발
+
+- 개발 기간: `2023.05 ~ 2023.07`
+- AWS Lambda를 이용한 의료 챗봇 서비스의 프론트를 개발했습니다.
+- 회사의 유일한 프론트 개발자로서 프론트 개발을 담당했습니다.
 
 ### NTTTT - NFT Ticket Trading Town 프론트 개발
 
 - 개발 기간: `2023.03 ~ 2023.05`
-- 아티스트 콘서트 사진을 기반으로 한 NFT 티켓 거래 플랫폼을 개발했습니다
-- 종합프로젝트2 과목의 일환으로 진행했습니다
-- 약 2달 간 기획을 진행하며 구현 방향 및 개발 계획을 수립했습니다
-- 실제 개발 기간은 5월, 한 달이었습니다
+- 아티스트 콘서트 사진을 기반으로 한 NFT 티켓 거래 플랫폼 개발했습니다.
+  - Ganache를 이용한 로컬 개발 환경에서 개발했습니다.
+- 학교 수업 `종합 프로젝트 2`의 프로젝트로써 진행했습니다.
+  - 팀원 5명(프론트 2명, 백엔드 3명) 중 프론트 개발을 담당했습니다.
+- 구매하고 싶은, 소장하고 싶은 NFT를 UI/UX적으로 구현하고자 노력했습니다.
+  - `framer-motion`을 이용해 애니메이션을 구현하였습니다.
 
-#### 역할
+#### 해결한 문제
 
-- 모바일에 최적화된 UI/UX를 설계했습니다
-  - `tailwind`를 사용해 반응형 웹을 구현했습니다
-  - `rtk-query`를 사용해 서버 데이터를 관리했습니다
-  - `framer-motion`을 사용해 애니메이션을 구현했습니다
-  - 특히 `framer-motion`을 사용해 실제 앱과 유사한 느낌이 들도록 애니메이션을 구현했습니다
-  - `vite-pwa-plugin`의 `workbox`가 api route의 request를 intercept하는 문제를 해결했습니다
-- 같은 학교의 대학생 디자이너와 협업하였습니다
-  - Figma를 사용해 작업물을 공유했습니다
-  - UI/UX를 중심으로 피드백을 주고받았습니다
+1. 구매하고 싶은, 소장하고 싶은 NFT를 UI/UX적으로 구현하고자 노력했습니다.
+
+   - 사용자(교수님)께서 "형체가 없는 NFT를 구매하고 싶을까?"라고 의문을 제기하셨습니다.
+   - 손에 만져지고 구매하고 싶은 NFT를 만들기 위해 UX적으로 접근했습니다.
+   - `framer-motion`의 애니메이션과 제스쳐를 이용해 NFT를 인터랙티브하게 만들었습니다.
+   - 최종 발표 때 교수님과 학생들에게 라이브 데모를 진행하였습니다.
+   - 팀 간 평가 및 교수 평가에서 UI/UX가 인상적이라는 평가를 받으며 `A+`의 성적으로 프로젝트를 마무리했습니다.
+   - <a href="https://github.com/NTTTT-NFT-Ticket-Trading-Town/NTTTT-FE/blob/main/public/NTTTT_%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81.gif" target="_blank">
+        앱 프리뷰 링크
+       </a>
+
+2. `vite-pwa-plugin`의 `workbox`가 `/api` route로의 browser request를 intercept하는 문제를 해결했습니다.
+
+   - `/api`로 리버스 프록시해둔 백엔드 서버의 swagger가 browser에서만 접속되지 않았습니다.
+   - `react-router` 혹은 `workbox`가 request를 intercept한다고 판단했습니다.
+   - Chrome DevTools의 Network 탭으로 디버깅하여 `workbox`의 문제임을 확인했습니다.
+   - `workbox`의 `navigateFallbackDenylist`에 `/api`를 추가해 해결했습니다.
+   - <a href="https://github.com/NTTTT-NFT-Ticket-Trading-Town/NTTTT-FE/issues/62" target="_blank">
+         Github Issue 링크
+       </a>
 
 #### 링크
 
 - <a href="https://github.com/ntttt-nft-ticket-trading-town/ntttt-fe" target="_blank">
     깃헙 리포 링크
   </a>
+
+### 오픈소스 `githru-vscode-ext`에 3290배 성능 향상을 컨트리뷰션
+
+- 개발 기간: `2023.04.26 ~ 2022.04.27`
+- `오픈소스 컨트리뷰션 아카데미`에서 진행한 `2023 오픈소스 컨트리뷰톤 대구`에서 참여했습니다.
+- `git` 기록을 분석해주는 `githru-vscode-ext`에 참가했습니다.
+- `getFileChangesTree()` 함수의 성능을 `3290배` 향상시켰습니다.
+  - 성능 개선 내용을 정리해 팀을 대표로 성과를 발표했습니다.
+- 반응형 디자인 작업도 진행했습니다.
+
+#### 해결한 문제
+
+1. `getFileChangesTree()` 함수의 성능을 3290배 향상시켰습니다.
+
+   - 테스트한 환경에서 렌더링이 1분 40초 넘게 블로킹되는 문제가 있었습니다.
+   - Chrome DevTools의 Performance 탭으로 디버깅하여 `getFileChangesTree()` 함수가 성능 저하의 원인임을 확인했습니다.
+   - `Object.entries`로 복사한 객체를 `reduce` 함수에서 불필요하게 구조 분해 할당하는 것을 확인하였습니다.
+   - 구조 분해 할당을 직접 할당으로 변경하여 성능을 향상시켰습니다.
+   - 성능 향상 후 렌더링이 0.03초로 줄어들며 성능이 3290배 향상되었습니다.
+   - <a href="https://github.com/githru/githru-vscode-ext/pull/304" target="_blank">
+     머지된 PR 링크
+     </a>
+
+1. 임의의 값으로 hard-coded된 media-query를 flexbox로 바꾸어 반응형 디자인을 개선했습니다.
+
+   - 어플리케이션의 너비가 media-query를 통해 고정된 px값으로 설정되어 있었습니다.
+   - flexbox를 이용하면 media-query가 필요 없다고 판단했습니다.
+     - flex-grow를 이용해 media-query 없이 어플리케이션의 너비가 유동적으로 변하도록 개선했습니다.
+   - <a href="https://github.com/githru/githru-vscode-ext/pull/300" target="_blank">
+     머지된 PR 링크
+     </a>
+
+<details>
+<summary>더보기</summary>
 
 ### [2022 대구를 빛내는 SW 해커톤] 신청 폼 프론트 개발
 
@@ -139,17 +184,24 @@ heroImage: "/placeholder-about.jpeg"
   </a>
 - <a href="https://youtu.be/e_PgEpe5W-E" target="_blank">유튜브 데모 영상</a>
 
+</details>
+
 ## 🎓 Studies
 
 ### GPA
 
-- `4.21` / `4.3` (2023. 02)
+- `4.22` / `4.3` (2023. 08)
 
 ### TOPCIT
 
 - `LEVEL 3` (2023. 05. 20.)
   - 48/65 문제
   - 590점 (상위 10% 474.4점)
+
+### Scholarship
+
+- 정수장학회
+  - 2020.03 ~ Present
 
 ## 🇺🇸 English Afficiency
 
